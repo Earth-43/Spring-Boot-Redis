@@ -1,10 +1,10 @@
-A circuit breaker design pattern is used to detect failures and encapsulates the logic of preventing a failure from constantly recurring, during maintenance, temporary external system failure or unexpected system difficulties. Here's how you can implement a circuit breaker design pattern in a Java Spring Boot application that consumes data from Kafka and saves it to a Cassandra database:
+A circuit breaker design pattern is used to detect failures and encapsulates the logic of preventing a failure from constantly recurring, during maintenance, temporary external system failure or unexpected system difficulties. Here's how you can implement a circuit breaker design pattern in a Java Spring Boot application that consumes data from Kafka and saves it to a Cassandra database 
 
-    Kafka Consumer: Your application should have a Kafka consumer that reads data from a Kafka topic. This can be done using the @KafkaListener annotation in Spring Boot.
+    - Kafka Consumer: Your application should have a Kafka consumer that reads data from a Kafka topic. This can be done using the @KafkaListener annotation in Spring Boot.
 
-    Cassandra Database Connection: The application should establish a connection with the Cassandra database where the data will be stored. You can use Spring Data Cassandra for this.
+    - Cassandra Database Connection: The application should establish a connection with the Cassandra database where the data will be stored. You can use Spring Data Cassandra for this.
 
-    Circuit Breaker: You can use a library like Resilience4j, which is a lightweight fault tolerance library inspired by Netflix Hystrix. It provides higher-order functions (decorators) to enhance any functional interface, lambda expression or method reference with a Circuit Breaker, Rate Limiter, Retry or Bulkhead functionality. For Spring Boot, Resilience4j provides a Spring Boot Starter module where Circuit Breaker module is auto-configured.
+    - Circuit Breaker: You can use a library like Resilience4j, which is a lightweight fault tolerance library inspired by Netflix Hystrix. It provides higher-order functions (decorators) to enhance any functional interface, lambda expression or method reference with a Circuit Breaker, Rate Limiter, Retry or Bulkhead functionality. For Spring Boot, Resilience4j provides a Spring Boot Starter module where Circuit Breaker module is auto-configured.
 
     Circuit Breaker Configuration: Configure the circuit breaker for the Cassandra database connection. You can specify parameters like failure rate threshold, wait duration in open state, and slow call rate threshold.
 
